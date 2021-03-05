@@ -1,0 +1,10 @@
+ <!-- 博客卡片列表 -->
+ <view>
+    <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+        <m-blog-card blog="{{item}}" bind:tap="goComment" data-blogid="{{item._id}}"/>
+        <!-- 博客评论和分享 -->
+        <m-blog-ctrl blogId="{{item._id}}" blog="{{item}}" />
+      </view>
+    </block>
+  </view>
